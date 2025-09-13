@@ -6,30 +6,118 @@
   <title>Fichas de Computación</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background-color: #f5f5f5; display: flex; flex-direction: column; min-height: 100vh; }
-    header { background-color: #350a06; color: white; padding: 20px; position: relative; text-align: center; display: flex; align-items: center; justify-content: center; }
-    header img { height: 80px; width: auto; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); }
+    html, body { height: 100%; font-family: Arial, sans-serif; background-color: #f5f5f5; }
+
+    /* HEADER GENERAL */
+    header {
+      background-color: #350a06;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* permite que el contenido baje si no cabe */
+      text-align: center;
+      position: relative;
+    }
+
+    /* LOGO */
+    header img {
+      height: 80px;
+      width: auto;
+      margin-right: 20px; /* separa del título en PC */
+      position: static; /* ya no es absoluto */
+    }
+
+    /* CONTENIDO DEL HEADER */
+    header div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* TITULO Y TEXTO */
     header h1 { font-size: 28px; }
     header p { font-size: 16px; margin-top: 5px; }
-    main { flex: 1; padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; justify-content: center; align-items: start; }
-    .card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 20px; text-align: center; transition: transform 0.2s; cursor: pointer; text-decoration: none; color: inherit; }
-    .card:hover { transform: translateY(-5px); background-color: #f0e6e6; }
-    footer { background-color: #350a06; color: white; text-align: center; padding: 15px; font-size: 14px; }
+
+    /* MAIN CARDS */
+    main {
+      flex: 1;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, background-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: #f0e6e6;
+    }
+
+    .card h2 { color: #3b0a0a; font-size: 22px; margin-bottom: 10px; }
+    .card p { color: #555; font-size: 16px; }
+
+    /* FOOTER */
+    footer {
+      background-color: #350a06;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    footer a { color: white; text-decoration: none; }
+
+    /* RESPONSIVE PARA MÓVIL */
+    @media (max-width: 500px) {
+      header { flex-direction: column; padding: 10px; }
+      header img { height: 60px; margin: 0 0 10px 0; }
+      header h1 { font-size: 22px; }
+      header p { font-size: 14px; }
+    }
   </style>
 </head>
 <body>
+<<<<<<< Updated upstream
+=======
+  <header>
+    <img src="logo.png" alt="Logo de la institución">
+    <div>
+      <h1>Fichas de Computación</h1>
+      <p>Selecciona tu curso para ver las fichas</p>
+    </div>
+  </header>
+
+>>>>>>> Stashed changes
   <main>
     <a href="basica-elemental/" class="card">
       <h2>Básica Elemental</h2>
+      <p>Próximamente disponibles las fichas.</p>
     </a>
     <a href="basica-media/" class="card">
       <h2>Básica Media</h2>
+      <p>Próximamente disponibles las fichas.</p>
     </a>
     <a href="basica-superior/" class="card">
       <h2>Básica Superior</h2>
+      <p>Próximamente disponibles las fichas.</p>
     </a>
     <a href="bachillerato/" class="card">
       <h2>Bachillerato</h2>
+      <p>Próximamente disponibles las fichas.</p>
     </a>
   </main>
 
