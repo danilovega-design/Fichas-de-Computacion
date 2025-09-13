@@ -15,24 +15,27 @@
       padding: 20px 30px;
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* logo a la izquierda en PC */
+      justify-content: center; /* centra el contenido (texto) */
+      position: relative;
       flex-wrap: wrap;
-      text-align: left;
     }
 
     /* LOGO */
     header img {
       height: 80px;
       width: auto;
-      margin-right: 20px;
-      flex-shrink: 0;
+      position: absolute; /* logo siempre a la izquierda */
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     /* CONTENIDO DEL HEADER */
     header div {
       display: flex;
       flex-direction: column;
-      justify-content: center; /* centra verticalmente el texto respecto al logo */
+      align-items: center; /* centra el texto */
+      justify-content: center;
     }
 
     /* TITULO Y TEXTO */
@@ -43,7 +46,6 @@
     main {
       flex: 1;
       padding: 30px;
-      padding-bottom: 50px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
@@ -80,8 +82,6 @@
       margin-top: 20px;
     }
 
-    footer a { color: white; text-decoration: none; }
-
     /* RESPONSIVE PARA MÓVIL */
     @media (max-width: 768px) {
       header {
@@ -92,8 +92,10 @@
       }
 
       header img {
+        position: static; /* logo centrado arriba en móvil */
+        transform: none;
+        margin-bottom: 10px;
         height: 60px;
-        margin: 0 0 10px 0;
       }
 
       header h1 { font-size: 22px; }
