@@ -6,7 +6,7 @@
   <title>Fichas de Computación</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; font-family: Arial, sans-serif; background-color: #f5f5f5; }
+    html, body { height: 100%; font-family: Arial, sans-serif; background-color: #f5f5f5; display: flex; flex-direction: column; }
 
     /* HEADER GENERAL */
     header {
@@ -16,7 +16,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; /* permite que el contenido baje si no cabe */
+      flex-wrap: wrap;
       text-align: center;
     }
 
@@ -43,6 +43,7 @@
     main {
       flex: 1;
       padding: 30px;
+      padding-bottom: 50px; /* espacio debajo de las cards */
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
@@ -59,6 +60,7 @@
       transition: transform 0.2s, background-color 0.2s;
       text-decoration: none;
       color: inherit;
+      cursor: pointer;
     }
 
     .card:hover {
@@ -74,8 +76,9 @@
       background-color: #350a06;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
+      margin-top: 20px; /* espacio encima del footer */
     }
 
     footer a { color: white; text-decoration: none; }
@@ -124,3 +127,4 @@
 
 </body>
 </html>
+
