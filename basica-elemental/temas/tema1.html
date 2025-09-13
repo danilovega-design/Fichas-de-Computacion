@@ -1,42 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema 1 - Inicios de Word</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: Arial, sans-serif; background-color: #f5f5f5; display:flex; flex-direction:column; min-height:100vh; }
-
-    header { background-color:#350a06; padding:20px 30px; display:flex; align-items:center; }
-    header img { height:80px; width:auto; margin-right:20px; }
-    header h1 { font-size:22px; color:white; }
-
-    main { flex:1; padding:30px; }
-    main h2 { color:#3b0a0a; margin-bottom:15px; }
-    main p { font-size:16px; color:#555; line-height:1.5; }
-
-    footer { background-color:#350a06; color:white; text-align:center; padding:20px; font-size:14px; }
-    footer a { color:white; text-decoration:none; }
-
-    @media (max-width:768px) { header { flex-direction:column; text-align:center; } header img { margin:0 0 10px 0; height:60px; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1 - Básica Elemental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .code-block {
+            background-color: #f4f4f5;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: monospace;
+            color: #18181b;
+            border: 1px solid #e4e4e7;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #09f;
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-<header>
-  <img src="../logo.png" alt="Logo de la institución">
-  <h1>Tema 1 - Inicios de Word</h1>
-</header>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Tema 1 - Inicios de Word</h1>
+                <p class="text-lg text-gray-600 mt-1">Aprende los fundamentos y conceptos básicos de Word.</p>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                 <a href="#conceptos" class="text-gray-600 hover:text-blue-600 transition">Conceptos</a>
+                 <a href="#practica" class="text-gray-600 hover:text-green-600 transition">Práctica</a>
+            </nav>
+        </div>
+    </header>
 
-<main>
-  <h2>Contenido del Tema 1</h2>
-  <p>Aquí irá toda la información de Inicios de Word. Puedes agregar imágenes, listas y texto explicativo.</p>
-</main>
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
 
-<footer>
-  <a href="../unidad1.html">← Volver a Unidad 1</a>
-</footer>
+        <!-- Section: Conceptos -->
+        <section id="conceptos" class="mb-12 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500 text-gray-800">Conceptos Fundamentales</h2>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-700">¿Qué es Microsoft Word?</h3>
+                <p class="mb-4 text-gray-600">Microsoft Word es un procesador de textos que permite crear, editar y formatear documentos de manera profesional y eficiente.</p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-medium mb-2">Elementos básicos</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Documento: archivo donde escribes y guardas la información.</li>
+                            <li>Cinta de opciones: barra superior con herramientas (Inicio, Insertar, Diseño, etc.).</li>
+                            <li>Regla y márgenes: guías para organizar el contenido.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-medium mb-2">Funciones esenciales</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Formato de texto: negrita, cursiva, subrayado.</li>
+                            <li>Listas: numeradas y con viñetas.</li>
+                            <li>Insertar imágenes y tablas.</li>
+                            <li>Revisión de ortografía y gramática.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Práctica -->
+        <section id="practica" class="scroll-mt-24">
+             <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500 text-gray-800">Práctica Guiada</h2>
+             <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-green-700">Ejercicio 1: Crear un Documento</h3>
+                <p class="mb-4 text-gray-600">Crea un documento nuevo en Word, agrega un título, subtítulos y un párrafo con tu texto de ejemplo.</p>
+
+                <h4 class="text-xl font-medium mb-2">Tips:</h4>
+                <ul class="list-disc list-inside mb-3 space-y-2 text-gray-600">
+                    <li>Usa negrita y cursiva para resaltar información importante.</li>
+                    <li>Aplica listas numeradas o con viñetas para organizar puntos.</li>
+                    <li>Inserta al menos una imagen desde el menú "Insertar".</li>
+                </ul>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 py-6 border-t">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>&copy; 2025 - Ing. Danilo Vega | Robótica 30-09</p>
+            <a href="../unidad1.html" class="text-blue-600 hover:underline block mt-2">← Volver a Unidad 1</a>
+        </div>
+    </footer>
 
 </body>
 </html>
