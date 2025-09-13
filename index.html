@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fichas de Computación</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #f5f5f5; display: flex; flex-direction: column; min-height: 100vh; }
+    header { background-color: #350a06; color: white; padding: 20px; position: relative; text-align: center; display: flex; align-items: center; justify-content: center; }
+    header img { height: 80px; width: auto; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); }
+    header h1 { font-size: 28px; }
+    header p { font-size: 16px; margin-top: 5px; }
+    main { flex: 1; padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; justify-content: center; align-items: start; }
+    .card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 20px; text-align: center; transition: transform 0.2s; cursor: pointer; text-decoration: none; color: inherit; }
+    .card:hover { transform: translateY(-5px); background-color: #f0e6e6; }
+    footer { background-color: #350a06; color: white; text-align: center; padding: 15px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo de la institución">
+    <div>
+      <h1>Fichas de Computación</h1>
+      <p>Selecciona tu curso para ver las unidades</p>
+    </div>
+  </header>
+
+  <main>
+    <a href="basica-elemental/" class="card">
+      <h2>Básica Elemental</h2>
+    </a>
+    <a href="basica-media/" class="card">
+      <h2>Básica Media</h2>
+    </a>
+    <a href="basica-superior/" class="card">
+      <h2>Básica Superior</h2>
+    </a>
+    <a href="bachillerato/" class="card">
+      <h2>Bachillerato</h2>
+    </a>
+  </main>
+
+  <footer>
+    © 2025 - Ing. Danilo Vega | Robótica 30-09
+  </footer>
+</body>
+</html>
