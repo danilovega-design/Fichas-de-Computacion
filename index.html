@@ -11,36 +11,38 @@
     /* HEADER GENERAL */
     header {
       background-color: #350a06;
-      color: white;
       padding: 20px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center; /* centra el contenido (texto) */
-      position: relative;
-      flex-wrap: wrap;
     }
 
-    /* LOGO */
-    header img {
+    /* Logo y texto juntos */
+    .logo-texto {
+      display: flex;
+      align-items: center; /* centra verticalmente */
+      justify-content: center; /* centra horizontalmente todo el bloque */
+    }
+
+    .logo-texto img {
       height: 80px;
       width: auto;
-      position: absolute; /* logo siempre a la izquierda */
-      left: 30px;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-right: 20px; /* separa del texto */
     }
 
-    /* CONTENIDO DEL HEADER */
-    header div {
+    .texto-header {
       display: flex;
       flex-direction: column;
       align-items: center; /* centra el texto */
-      justify-content: center;
     }
 
-    /* TITULO Y TEXTO */
-    header h1 { font-size: 28px; }
-    header p { font-size: 16px; margin-top: 5px; }
+    .texto-header h1 {
+      font-size: 28px;
+      color: white;
+    }
+
+    .texto-header p {
+      font-size: 16px;
+      color: white;
+      margin-top: 5px;
+    }
 
     /* MAIN CARDS */
     main {
@@ -84,32 +86,34 @@
 
     /* RESPONSIVE PARA MÓVIL */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column; 
-        justify-content: center; 
-        text-align: center;
-        padding: 10px;
+      .logo-texto {
+        flex-direction: column; /* logo arriba del texto */
       }
 
-      header img {
-        position: static; /* logo centrado arriba en móvil */
-        transform: none;
-        margin-bottom: 10px;
+      .logo-texto img {
+        margin: 0 0 10px 0;
         height: 60px;
       }
 
-      header h1 { font-size: 22px; }
-      header p { font-size: 14px; }
+      .texto-header h1 {
+        font-size: 22px;
+      }
+
+      .texto-header p {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo de la institución">
-    <div>
-      <h1>Fichas de Computación</h1>
-      <p>Selecciona tu curso para ver las fichas</p>
+    <div class="logo-texto">
+      <img src="logo.png" alt="Logo de la institución">
+      <div class="texto-header">
+        <h1>Fichas de Computación</h1>
+        <p>Selecciona tu curso para ver las fichas</p>
+      </div>
     </div>
   </header>
 
