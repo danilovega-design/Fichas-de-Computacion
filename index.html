@@ -12,7 +12,7 @@
     header {
       background-color: #350a06;
       color: white;
-      padding: 20px;
+      padding: 20px 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -24,8 +24,8 @@
     header img {
       height: 80px;
       width: auto;
-      margin-right: 20px;
-      position: static; /* no absoluto */
+      margin-right: 20px; /* separa del título en PC */
+      flex-shrink: 0; /* evita que se encoja */
     }
 
     /* CONTENIDO DEL HEADER */
@@ -43,7 +43,7 @@
     main {
       flex: 1;
       padding: 30px;
-      padding-bottom: 50px; /* espacio debajo de las cards */
+      padding-bottom: 50px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
@@ -78,13 +78,13 @@
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      margin-top: 20px; /* espacio encima del footer */
+      margin-top: 20px;
     }
 
     footer a { color: white; text-decoration: none; }
 
     /* RESPONSIVE PARA MÓVIL */
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       header { flex-direction: column; padding: 10px; }
       header img { height: 60px; margin: 0 0 10px 0; }
       header h1 { font-size: 22px; }
@@ -127,4 +127,3 @@
 
 </body>
 </html>
-
